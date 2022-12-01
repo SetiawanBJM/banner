@@ -5,6 +5,9 @@
  */
 package poliban;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author 62813
@@ -31,6 +34,11 @@ public class halaman1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Politeknik Negeri Banjarmasin");
@@ -74,6 +82,13 @@ public class halaman1 extends javax.swing.JFrame {
         dispose();
         new halaman2().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+          setTitle("Untuk Yang Terbaik");   
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\62813\\Documents\\NetBeansProjects\\poliban\\src\\poliban\\Logo-Poliban.png");
+        setIconImage(icon);
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
